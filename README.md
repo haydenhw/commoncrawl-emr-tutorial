@@ -72,7 +72,8 @@ Now open the AWS EMR conosole in your browser and click the **Create cluster** b
 ![](screenshots/4-create-cluster.png)
 
 ## Name Cluster and set Launch Mode
-Give your cluster a name then click the **Step execution** option for **Launch mode**
+1. Give your cluster a name 
+2. Select the **Step execution** option for **Launch mode**
 
 ![](screenshots/5-step-execution.png)
 
