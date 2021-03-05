@@ -7,7 +7,7 @@ ThisBuild / organizationName := "revature"
 
 lazy val root = (project in file("."))
   .settings(
-    name := "emr-template",
+    name := "commoncrawl-emr-demo",
     libraryDependencies += scalaTest % Test,
     libraryDependencies += "org.apache.spark" %% "spark-sql" % "2.4.7" % "provided"
     // provided means the dep will be provided in the environment we run this project
