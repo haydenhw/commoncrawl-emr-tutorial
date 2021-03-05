@@ -36,7 +36,9 @@ cd commoncrawl-emr-tutorial
 ```
 
 ## Update the output bucket name
-You'll need to modifiy one line of the application Runner to tell Spark where to find the "output" bucket you created earlier.
+You'll need to modifiy one line of the application Runner to tell Spark where to find the "output" bucket you created earlier:
+
+`src/main/scala/com/revature/commoncrawlemrdemo/Runner.scala`
 
 Replace YOUR-BUCKET-NAME with the name of your output bucket at the line shown below.
 
