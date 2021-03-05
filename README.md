@@ -1,5 +1,5 @@
 ## EMR Tutorial
-This guide walks you through submitting a Scala Spark application to EMR that queries 500k job urls from Common Crawl and stores the result in an S3 bucket as a CSV file.
+This guide walks you through submitting a Scala Spark application to EMR that queries 500k job urls from Common Crawl and stores the results to an S3 bucket in CSV format.
 
 Running the application on EMR will cost about 35 cents
 
@@ -21,7 +21,7 @@ s3cmd mb input-bucket-revusf
 s3cmd mb output-bucket-revusf
 ```
 
-I'm going to use `s3cmd` for throughout this guide, but feel free to use AWS-cli or the S3 console.
+I use `s3cmd` for throughout this guide, but feel free to use AWS-cli or the S3 console.
 
 ### Clone the Repo
 We're going to build our application jar locally then submit it to EMR so we'll need to clone this repo
@@ -63,31 +63,51 @@ Now open the AWS EMR conosole in your browser and click the **Create cluster** b
 
 ![](screenshots/4-create-cluster.png)
 
-# Name Cluster and set Launch Mode
+### Name Cluster and set Launch Mode
 Give your cluster a name then click the **Setup execution** option for **Launch mode**
-
-Step execution will automatically terminate the cluster after our application completes. This is nice beacause we won't need to worry about accidentally leaving the cluster running an racking up charges when we aren't using it.
-
 
 ![](screenshots/5-step-execution.png)
 
+Step execution will automatically terminate the cluster after our application completes. This is nice beacause we won't need to worry about accidentally leaving the cluster running an racking up charges when we aren't using it.
+
+# Set Step type and Configure
+Select **Spark application** for **Step type**
+
+Then click **Configure**
+
 ![](screenshots/6-spark-application.png)
 
-# Configure your Spark application
+### Spark application configuration
+1. In **Spark-submit option** provide the path to your Runner class
+`--class com.revature.commoncrawlemrdemo.Runner`
+2. Here we need to tell EMR where to find our jar file on S3. Click the folder icon then locate and select the jar file you uploaded earlier. 
+3. Select **Terminate cluster** for **Action on failure**
+
 ![](screenshots/7-configure-step.png)
-![](screenshots/7.5-configured-step.png)
-# Create Cluster
+
+### Finish Cluster Creation
+Leave the rest of the setting as default and click the **Create cluster** button
+
 ![](screenshots/8-finish-create-cluster.png)
 
-# Monitor your step
+### Monitor your step
+Open the **Steps** tab.
+
+At first the application status will show Pending. After 5-10 minutes it will change to Running.
 ![](screenshots/9-steps-tab.png)
 ![](screenshots/10-running-step.png)
+If a job you submit ever fails, click the **stderr** link to see debug logs.
 
-# Check on your application progress
+### Check on your application progress
+Once the application is in a Running status you can monitor progress in the **Spark history server**.
 ![](screenshots/11-history-server.png)
+
+### Download your output data
+
+As you can see the job took 38 minutes to complete. This is about on par with other similar queries I've run on the columnar index. 
 ![](screenshots/12-complete-step.png)
 
-# Download you output data
+After the job is finished, your ouput bucket should be populated with a nice CSV file packed full of job URLS
 ![](screenshots/13-download-data.png)
 ![](screenshots/14-display-data.png)
 
