@@ -116,5 +116,6 @@ As you can see the job took 38 minutes to complete. This is about on par with ot
 ![](screenshots/12-complete-step.png)
 
 After the job is finished, your ouput bucket should be populated with a nice CSV file packed full of job URLS
+
 ![](screenshots/13-download-data.png)
 ![](screenshots/14-display-data.png)
