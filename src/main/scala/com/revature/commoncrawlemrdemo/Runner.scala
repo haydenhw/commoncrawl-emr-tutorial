@@ -33,7 +33,7 @@ object Runner {
       .limit(500000)
 
     // Change YOUR-BUCKET-NAME to the name of the output bucket you created on S3
-    val s3OutputBucket = "s3a://YOUR-BUCKET-NAME"
+    val s3OutputBucket = "s3a://YOUR-BUCKET-NAME/commoncrawl-demo-data"
 
     jobUrls.write.format("csv").mode("overwrite").save(s3OutputBucket )
 
