@@ -77,7 +77,7 @@ Now open the AWS EMR conosole in your browser and click the **Create cluster** b
 
 ![](screenshots/5-step-execution.png)
 
-Step execution will automatically terminate the cluster after our application completes. This is nice beacause we won't need to worry about accidentally leaving the cluster running an racking up charges when we aren't using it.
+Step execution will automatically terminate the cluster after our application completes. This is nice beacause we won't need to worry about accidentally leaving the cluster running and racking up charges when we aren't using it.
 
 ## Set Step type and Configure
 Select **Spark application** for **Step type**
