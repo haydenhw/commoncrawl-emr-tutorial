@@ -21,11 +21,6 @@ s3cmd mb output-bucket-revusf
 I'm going to use `s3cmd` for throughout this guide, but feel free to use AWS-cli or the S3 console.
 
 ![](screenshots/1.5-change-bucekt-name.png)
-![](screenshots/10-running-step.png)
-![](screenshots/11-history-server.png)
-![](screenshots/12-complete-step.png)
-![](screenshots/13-download-data.png)
-![](screenshots/14-display-data.png)
 ![](screenshots/2-sbt-assembly.png)
 ![](screenshots/3-upload-jar.png)
 ![](screenshots/4-create-cluster.png)
@@ -35,6 +30,12 @@ I'm going to use `s3cmd` for throughout this guide, but feel free to use AWS-cli
 ![](screenshots/7.5-configured-step.png)
 ![](screenshots/8-finish-create-cluster.png)
 ![](screenshots/9-steps-tab.png)
+![](screenshots/10-running-step.png)
+![](screenshots/11-history-server.png)
+![](screenshots/12-complete-step.png)
+![](screenshots/13-download-data.png)
+![](screenshots/14-display-data.png)
+
 ![](screenshots/console-summary.png)
 ![](screenshots/messedup-7-configure-step.png)
 ![](screenshots/nouse-hsitory-server.png)
