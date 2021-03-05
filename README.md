@@ -1,10 +1,10 @@
 # EMR Tutorial
 This guide walks you through submitting a Scala Spark application to EMR that queries 500k job urls from Common Crawl and saves the results to an S3 bucket in CSV format.
 
-Running the application on EMR will cost about 35 cents
+Running the application on EMR will cost about 50 cents.
 
 ## Prerequisites
-This isn't required, but I highly reccomend this 6 minute intro to EMR. It's the simplest EMR hello world you could ask for
+This isn't required, but I highly reccomend this 6 minute intro to EMR. It's the simplest EMR hello world you could ask for:
 
 https://www.youtube.com/watch?v=gOT7El8rMws&ab_channel=JohnnyChivers
 
