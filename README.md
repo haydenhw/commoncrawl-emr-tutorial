@@ -17,8 +17,8 @@ I'll refer to these as your "input" and "output" buckets.
 I named my two buckets `input-bucket-revusf` and `output-bucket-revusf`
 
 ```shell
-s3cmd mb input-bucket-revusf
-s3cmd mb output-bucket-revusf
+s3cmd mb s3://input-bucket-revusf
+s3cmd mb s3://output-bucket-revusf
 ```
 
 I use `s3cmd` for throughout this guide, but feel free to use AWS-cli or the S3 console.
