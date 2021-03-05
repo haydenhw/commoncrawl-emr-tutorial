@@ -41,7 +41,10 @@ You'll need to modifiy one line of the application Runner to tell Spark where to
 Replace YOUR-BUCKET-NAME with the name of your output bucket at the line shown below.
 
 ![](screenshots/1.5-change-bucekt-name.png)
-Since I named my output bucket `output-bucket-revusf` the string would become `"s3a://output-bucket-revusf"`
+
+Since I named my output bucket `output-bucket-revusf` the string would become `"s3a://output-bucket-revusf/commoncrawl-demo-data"`
+
+When the application runs it will create a folder inside your bucket called `commoncrawl-demo-data` and store the results there.
 
 ## Create a jar file
 Now simply build the application as usual with sbt assembly:
